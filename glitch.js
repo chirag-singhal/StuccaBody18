@@ -260,12 +260,12 @@ function init() {
 	}
 
   return {
-    navigate
+    navigate, noOfImages: IMAGES.length
   }
 
 }
 
-const { navigate } = init();
+const { navigate, noOfImages } = init();
 let {next, previous, keyMap} = navigate
 next = next.bind(navigate)
 previous = previous.bind(navigate)
