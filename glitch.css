@@ -9,6 +9,8 @@ html, body{
   outline: 0;
   border: 0;
   box-sizing: border-box;
+  background-image: url("imgs/main-bg.jpg");
+  background-size: cover;
 }
 
 #image-container {

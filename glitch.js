@@ -10,32 +10,38 @@ function init() {
 	const IMAGES = [
 		{
 			name: "1.png",
-			title: "punk",
+			stuccanName: "Amritanshu Jain",
+			stuccanDept: "Department Of Visual Media",
 			require: () => ("imgs/1.png")
 		},
 		{
 			name: "2.png",
-			title: "aghori",
+			stuccanName: "Hitesh Raghuvanshi", 
+			stuccanDept: "Department of Accomodation",
 			require: () => ("imgs/2.png")
 		},
 		{
 			name: "3.png",
-			title: "goth",
+			stuccanName: "Amritanshu Jain",
+			stuccanDept: "Department Of Visual Media",
 			require: () => ("imgs/3.png")
 		},
 		{
 			name: "4.png",
-			title: "lgbt",
+			stuccanName: "Hitesh Raghuvanshi", 
+			stuccanDept: "Department of Accomodation",
 			require: () => ("imgs/4.png")
 		},
 		{
 			name: "5.png",
-			title: "rock",
+			stuccanName: "Amritanshu Jain",
+			stuccanDept: "Department Of Visual Media",
 			require: () => ("imgs/5.png")
 		},
 		{
 			name: "6.png",
-			title: "hippie",
+			stuccanName: "Hitesh Raghuvanshi", 
+			stuccanDept: "Department of Accomodation",
 			require: () => ("imgs/6.png")
 		}
 	];
@@ -66,6 +72,28 @@ function init() {
 		CONTAINER.appendChild(div);
 	}
 
+	IMAGES.map(ob => {
+		console.log(ob.stuccanName)
+		return ob.stuccanName;
+	}).map(n => {
+			const e = document.createElement('div');
+			e.append(document.createTextNode(n));
+			e.classList.add('stuccan-name')
+			return e;
+		}).forEach(e =>document.getElementById('stuccan-name-container').append(e))
+	const dummyEl = document.createElement('div');
+	dummyEl.append(document.createTextNode('d'));
+	dummyEl.classList.add('dummy');
+	document.getElementById('stuccan-name-container').append(dummyEl);
+	
+	IMAGES.map(ob => ob.stuccanDept)
+		.map(n => {
+			const e = document.createElement('div');
+			e.append(document.createTextNode(n));
+			e.classList.add('stuccan-dept')
+			return e;
+		}).forEach(e =>document.getElementById('stuccan-dept-container').append(e))
+		
 	let checkState = setInterval(function () {
 		// check if the image divs have been mounted to the document
 		if (document.readyState === "complete") {
@@ -92,26 +120,19 @@ function init() {
 
   let currentIndex = 0;
 
-  function goToImage(index) {
-    animateOut(currentIndex, ANIMATION_DURATION);
-
-
-    currentIndex = index;
-    // let nextIndex = (++currentIndex) % (IMAGES.length);
-    animateIn(currentIndex, ANIMATION_DURATION);
-
-    // currentIndex = nextIndex;
-  }
-
   const navigate = {
     currentIndex: 0,
     goToImage(newIndex) {
-      animateOut(this.currentIndex, ANIMATION_DURATION);
+	  animateOut(this.currentIndex, ANIMATION_DURATION);
+	  flickerOut(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
+	  flickerOut(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
 
       this.currentIndex = newIndex;
       console.log(newIndex)
       // let nextIndex = (++currentIndex) % (IMAGES.length);
-      animateIn(this.currentIndex, ANIMATION_DURATION);
+	  animateIn(this.currentIndex, ANIMATION_DURATION);
+	  flickerIn(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
+	  flickerIn(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
 
       // currentIndex = nextIndex;
     },

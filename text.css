@@ -1,0 +1,26 @@
+:root {
+    --nd-font-size: 36px;
+}
+
+#text-container * {
+    color: white;
+    /* position: absolute; */
+}
+
+.stuccan-name, .stuccan-dept{
+    position: absolute;
+    opacity: 0;
+    font-size: var(--nd-font-size);
+}
+
+.stuccan-name:nth-of-type(1) {
+    opacity: 1;
+}
+.stuccan-dept:nth-of-type(1) {
+    opacity: 1;
+}
+
+.dummy{
+    opacity: 0;
+    font-size: var(--nd-font-size);
+}
