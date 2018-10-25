@@ -265,6 +265,22 @@ function init() {
 
 }
 
+const flickerIn = elem => {
+	elem.classList.add('imageFlickerIn');
+	setTimeout(_ => {
+		elem.style.opacity = 1;
+		elem.classList.remove('imageFlickerIn');
+	}, 3000);
+}
+
+const flickerOut = elem => {
+	elem.classList.add('imageFlickerOut');
+	setTimeout(_ => {
+		elem.style.opacity = 0;
+		elem.classList.remove('imageFlickerOut');
+	}, 1500);
+}
+
 const { navigate, noOfImages } = init();
 let {next, previous, keyMap} = navigate
 next = next.bind(navigate)
