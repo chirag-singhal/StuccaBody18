@@ -95,15 +95,17 @@ function init() {
 			const stuccanDeptEl = createSpan(stuccanDept);
       stuccanDeptEl.classList.add('dept');
       stuccanDeptEl.dataset.text = stuccanDept;
-			const br = document.createElement('br');
+      const br1 = document.createElement('br');
+      const br2 = document.createElement('br');
 			return {
-				stuccanNameEl, stuccanDeptEl, br
+				stuccanNameEl, stuccanDeptEl, br1, br2
 			}
-		}).map(({stuccanNameEl, stuccanDeptEl, br}) => {
+		}).map(({stuccanNameEl, stuccanDeptEl, br1, br2}) => {
 			const el = document.createElement('div');
       el.classList.add('stuccan-container');
       el.append(stuccanNameEl);
-			el.append(br);
+      el.append(br1);
+      el.append(br2);
 			el.append(stuccanDeptEl);
 			return el;
 
