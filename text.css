@@ -53,6 +53,7 @@
     top: 0;
     left: 0;
     z-index: 5;
+    transition: 3s;
 }
 .body_container{
     position: absolute;
@@ -76,4 +77,5 @@
     background-size: cover;
     background-repeat: no-repeat;
     filter: hue-rotate(160deg);
+    transition: 3s;
 }

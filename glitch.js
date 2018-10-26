@@ -72,9 +72,7 @@ function init() {
 		img.id = "image" + index;
 		div.appendChild(img);
 
-		// let h1 = document.createElement("H1");
-		// h1.innerHTML = obj.title;
-		// div.appendChild(h1);
+		
 
 		// display none if not first image
 		if (index != 0) {
@@ -84,21 +82,6 @@ function init() {
 		CONTAINER.appendChild(div);
 	}
 
-	// IMAGES.map(ob => {
-	// 	console.log(ob.stuccanName)
-	// 	return ob.stuccanName;
-	// }).map(n => {
-	// 		const e = document.createElement('div');
-	// 		e.append(document.createTextNode(n));
-	// 		e.classList.add('stuccan-name')
-	// 		return e;
-	// 	}).forEach(e =>document.getElementById('stuccan-name-container').append(e))
-	// const dummyEl = document.createElement('div');
-	// dummyEl.append(document.createTextNode('d'));
-	// dummyEl.classList.add('dummy');
-	// const dummyEl2 = dummyEl.cloneNode(true);
-	// document.getElementById('stuccan-name-container').append(dummyEl);
-	
 	IMAGES.map(({stuccanDept, stuccanName}) => {
 			const createSpan = str => {
 				const s = document.createElement('span');
