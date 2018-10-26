@@ -1,6 +1,6 @@
 :root {
-  --max-height-var: 70vh;
-  --max-width-var: 80vw;
+  --max-height-var: 75vh;
+  --max-width-var: 30vw;
 }
 
 html, body{
@@ -37,8 +37,8 @@ html, body{
   color: #fff;
 }
 .image img {
-  max-height: var(--max-height-var);
-  max-width: var(--max-width-var);
+  height: var(--max-height-var);
+  width: var(--max-width-var);
   /* max-height: 100vh; */
   /* max-width: 100vw; */
   margin: 0 auto;
@@ -49,8 +49,8 @@ html, body{
   top: 0;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  max-height: var(--max-height-var);
-  max-width: var(--max-width-var);
+  height: var(--max-height-var);
+  width: var(--max-width-var);
   -webkit-filter: drop-shadow(-1px -1px 5px rgba(0, 255, 0, 0.2)) hue-rotate(142 deg);
   filter: drop-shadow(-1px -1px 5px rgba(0, 255, 0, 0.2)) hue-rotate(196deg);
 }
@@ -59,8 +59,8 @@ html, body{
   left: -8px;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  max-height: var(--max-height-var);
-  max-width: var(--max-width-var);
+  height: var(--max-height-var);
+  width: var(--max-width-var);
   -webkit-filter: drop-shadow(1px 1px 5px rgba(255, 0, 0, 0.2)) hue-rotate(15deg);
   filter: drop-shadow(1px 1px 5px rgba(255, 0, 0, 0.2)) hue-rotate(302deg);
 }
