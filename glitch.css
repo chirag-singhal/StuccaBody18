@@ -1,5 +1,5 @@
 :root {
-  --max-height-var: 75vh;
+  --max-height-var: auto;
   --max-width-var: 30vw;
 }
 
