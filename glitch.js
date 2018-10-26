@@ -84,27 +84,49 @@ function init() {
 		CONTAINER.appendChild(div);
 	}
 
-	IMAGES.map(ob => {
-		console.log(ob.stuccanName)
-		return ob.stuccanName;
-	}).map(n => {
-			const e = document.createElement('div');
-			e.append(document.createTextNode(n));
-			e.classList.add('stuccan-name')
-			return e;
-		}).forEach(e =>document.getElementById('stuccan-name-container').append(e))
-	const dummyEl = document.createElement('div');
-	dummyEl.append(document.createTextNode('d'));
-	dummyEl.classList.add('dummy');
-	document.getElementById('stuccan-name-container').append(dummyEl);
+	// IMAGES.map(ob => {
+	// 	console.log(ob.stuccanName)
+	// 	return ob.stuccanName;
+	// }).map(n => {
+	// 		const e = document.createElement('div');
+	// 		e.append(document.createTextNode(n));
+	// 		e.classList.add('stuccan-name')
+	// 		return e;
+	// 	}).forEach(e =>document.getElementById('stuccan-name-container').append(e))
+	// const dummyEl = document.createElement('div');
+	// dummyEl.append(document.createTextNode('d'));
+	// dummyEl.classList.add('dummy');
+	// const dummyEl2 = dummyEl.cloneNode(true);
+	// document.getElementById('stuccan-name-container').append(dummyEl);
 	
-	IMAGES.map(ob => ob.stuccanDept)
-		.map(n => {
-			const e = document.createElement('div');
-			e.append(document.createTextNode(n));
-			e.classList.add('stuccan-dept')
-			return e;
-		}).forEach(e =>document.getElementById('stuccan-dept-container').append(e))
+	IMAGES.map(({stuccanDept, stuccanName}) => {
+			// const e = document.createElement('div');
+			// e.append(document.createTextNode(n));
+			// e.classList.add('stuccan-dept')
+			// return e;
+			const createSpan = str => {
+				const s = document.createElement('span');
+				const t = document.createTextNode(str);
+				s.append(t);
+				return s;
+			}
+
+			const stuccanNameEl = createSpan(stuccanName);
+			stuccanNameEl.classList.add('stuccan-dept');
+			const stuccanDeptEl = createSpan(stuccanDept);
+			stuccanDeptEl.classList.add('stuccan-dept');
+			const br = document.createElement('br');
+			return {
+				stuccanNameEl, stuccanDeptEl, br
+			}
+		}).forEach(({stuccanNameEl, stuccanDeptEl, br}) => {
+			document.getElementById('stuccan-dept-container').append(stuccanNameEl);
+			document.getElementById('stuccan-dept-container').append(stuccanDeptEl);
+			document.getElementById('stuccan-dept-container').append(br);
+
+		})
+		// document.getElementById('stuccan-dept-container').append(dummyEl2);
+	
 		
 	let checkState = setInterval(function () {
 		// check if the image divs have been mounted to the document
@@ -136,15 +158,15 @@ function init() {
     currentIndex: 0,
     goToImage(newIndex) {
 	  animateOut(this.currentIndex, ANIMATION_DURATION);
-	  flickerOut(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
-	  flickerOut(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
+	  // flickerOut(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
+	  // flickerOut(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
 
       this.currentIndex = newIndex;
       console.log(newIndex)
       // let nextIndex = (++currentIndex) % (IMAGES.length);
 	  animateIn(this.currentIndex, ANIMATION_DURATION);
-	  flickerIn(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
-	  flickerIn(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
+	  // flickerIn(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
+	  // flickerIn(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
 
       // currentIndex = nextIndex;
     },
