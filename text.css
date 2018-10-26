@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "evagria";
+    src: url("./Evogria.otf");
+}
+
+/* @font-face {
+  font-family: "keepcalm";
+  src: url("./KeepCalm-Medium.ttf");
+}
+
+@font-face {
+  font-family: "baron";
+  src: url("./Baron\ Neue\ Bold.otf");
+} */
+
 :root {
     --nd-font-size1: 76px;
     --nd-font-size2: 38px;
@@ -12,8 +27,8 @@
 
 #text-container * {
     color: white;
-    font-family: 'Didact Gothic', sans-serif;
-
+    /* font-family: 'Didact Gothic', sans-serif; */
+    font-family: 'evagria';
 }
 
 .stuccan-container{
