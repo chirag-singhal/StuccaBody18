@@ -4,9 +4,10 @@
 }
 #text-container {
     position: absolute;
-    top: 30vh;
-    left: 0;
-    width: 70vw;
+    top: 27vh;
+    left: 5vw;
+    text-align: center;
+    width: 45vw;
 }
 
 #text-container * {
@@ -15,17 +16,14 @@
 
 }
 
-.stuccan-name, .stuccan-dept{
-    /*position: absolute;*/
-    /*left: 30%;*/
-    /*transform: translate(-30%);*/
-    /*opacity: 0;*/
+.stuccan-container{
+    width: 100%;
 }
-.stuccan-name {
+.name {
     font-size: var(--nd-font-size1);
     letter-spacing: 5px;
 }
-.stuccan-dept {
+.dept {
     font-size: var(--nd-font-size2);
     font-weight: 200;
     letter-spacing: 2px;
