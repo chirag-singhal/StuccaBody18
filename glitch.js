@@ -107,9 +107,11 @@ function init() {
 				return s;
 			}
 			const stuccanNameEl = createSpan(stuccanName);
-			stuccanNameEl.classList.add('name');
+      stuccanNameEl.classList.add('name');
+      stuccanNameEl.dataset.text = stuccanName;
 			const stuccanDeptEl = createSpan(stuccanDept);
-			stuccanDeptEl.classList.add('dept');
+      stuccanDeptEl.classList.add('dept');
+      stuccanDeptEl.dataset.text = stuccanDept;
 			const br = document.createElement('br');
 			return {
 				stuccanNameEl, stuccanDeptEl, br
@@ -123,8 +125,8 @@ function init() {
 			return el;
 
 		}).forEach(el => document.getElementById('text-container').append(el));
-	
-		
+
+    
 	let checkState = setInterval(function () {
 		// check if the image divs have been mounted to the document
 		if (document.readyState === "complete") {
@@ -157,7 +159,9 @@ function init() {
 	  animateOut(this.currentIndex, ANIMATION_DURATION);
 	  // flickerOut(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
 	  // flickerOut(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
-	  flickerOut(document.getElementsByClassName('stuccan-container')[this.currentIndex]);
+    flickerOut(document.getElementsByClassName('stuccan-container')[this.currentIndex]);
+    glitchText(document.getElementsByClassName('name')[this.currentIndex]);
+    glitchText(document.getElementsByClassName('dept')[this.currentIndex]);
 
       this.currentIndex = newIndex;
       console.log(newIndex)
@@ -165,9 +169,12 @@ function init() {
 	  animateIn(this.currentIndex, ANIMATION_DURATION);
 	  // flickerIn(document.getElementsByClassName('stuccan-name')[this.currentIndex]);
 	  // flickerIn(document.getElementsByClassName('stuccan-dept')[this.currentIndex]);
-	  flickerIn(document.getElementsByClassName('stuccan-container')[this.currentIndex]);
-
-      // currentIndex = nextIndex;
+    flickerIn(document.getElementsByClassName('stuccan-container')[this.currentIndex]);
+    setTimeout(() => {
+      glitchText(document.getElementsByClassName('name')[this.currentIndex]);
+      glitchText(document.getElementsByClassName('dept')[this.currentIndex]);
+    }, 1500);
+  // currentIndex = nextIndex;
     },
     next(){
       // console.log(IMAGES.length)
@@ -333,6 +340,11 @@ const flickerOut = elem => {
 		elem.style.opacity = 0;
 		elem.classList.remove('imageFlickerOut');
 	}, 1500);
+}
+
+const glitchText = elem => {
+  elem.classList.remove('glitch');
+  elem.classList.add('glitch');
 }
 
 const { navigate, noOfImages } = init();
