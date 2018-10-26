@@ -140,16 +140,16 @@ function init() {
       // console.log(IMAGES.length)
       const index = (this.currentIndex+1) % IMAGES.length;
       console.log(index)
-      this.goToImage(index)
+	  this.goToImage(index)
     },
     previous(){
       const index = ((this.currentIndex-1) + IMAGES.length ) % IMAGES.length;
       console.log(index)
-      this.goToImage(index)
+	  this.goToImage(index)
     },
     keyMap(key){
       const index = key - 1;
-      this.goToImage(index)
+	  this.goToImage(index)
     }
   }
 
@@ -307,4 +307,3 @@ let {next, previous, keyMap} = navigate
 next = next.bind(navigate)
 previous = previous.bind(navigate)
 keyMap = keyMap.bind(navigate)
-
