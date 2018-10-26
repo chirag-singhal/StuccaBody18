@@ -73,6 +73,15 @@ html, body{
   opacity: 1;
   animation: flicker-out 1.5s forwards;
 }
+
+.stuccan-container {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+.stuccan-container:nth-child(1){
+  opacity: 1;
+}
 @keyframes noise-anim {
   0% {
     clip: rect(357px, 9999px, 162px, 0);
