@@ -1,6 +1,5 @@
 window.addEventListener("keyup",key);
 function key(e) {
-		console.log(event);
 		var x = e.key;
 		if(x =="ArrowRight"){next();}
 		else if (x =="ArrowLeft") {previous();}
