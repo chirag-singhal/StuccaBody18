@@ -1,10 +1,10 @@
 :root {
-    --nd-font-size1: 60px;
-    --nd-font-size2: 30px;
+    --nd-font-size1: 76px;
+    --nd-font-size2: 38px;
 }
 #text-container {
     position: absolute;
-    top: 27vh;
+    top: 35vh;
     left: 5vw;
     text-align: center;
     width: 45vw;
