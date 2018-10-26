@@ -1,5 +1,5 @@
 :root {
-  --max-height-var: 100vh;
+  --max-height-var: 70vh;
   --max-width-var: 80vw;
 }
 
@@ -9,8 +9,7 @@ html, body{
   outline: 0;
   border: 0;
   box-sizing: border-box;
-  background-image: url("imgs/main-bg.jpg");
-  background-size: cover;
+  /* overflow: hidden; */
 }
 
 #image-container {
@@ -21,7 +20,7 @@ html, body{
   width: 48%;
   position: absolute;
   bottom: 0%;
-  right: 12%;
+  right: 0%;
   z-index: 10;
 }
 .image {
