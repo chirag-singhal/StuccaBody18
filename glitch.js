@@ -9,40 +9,52 @@ function init() {
 
 	const IMAGES = [
 		{
-			name: "1.png",
+			name: "1",
 			stuccanName: "Amritanshu Jain",
 			stuccanDept: "Department Of Visual Media",
-			require: () => ("imgs/1.png")
+			require: () => ("imgs/AmritanshuJain.png")
 		},
 		{
-			name: "2.png",
-			stuccanName: "Hitesh Raghuvanshi", 
-			stuccanDept: "Department of Accomodation",
-			require: () => ("imgs/2.png")
+			name: "2",
+			stuccanName: "Aditi Pandey", 
+			stuccanDept: "Department of Publications And Correspondence",
+			require: () => ("imgs/AditiPandey.png")
 		},
 		{
 			name: "3.png",
-			stuccanName: "Amritanshu Jain",
-			stuccanDept: "Department Of Visual Media",
-			require: () => ("imgs/3.png")
+			stuccanName: "Rahul Unnithan",
+			stuccanDept: "Department Of Reception And Accomodation",
+			require: () => ("imgs/RahulUnnithan.png")
 		},
 		{
 			name: "4.png",
-			stuccanName: "Hitesh Raghuvanshi", 
-			stuccanDept: "Department of Accomodation",
-			require: () => ("imgs/4.png")
+			stuccanName: "Aakash Singh", 
+			stuccanDept: "General Secretary Student Union",
+			require: () => ("imgs/AakashSingh.png")
 		},
 		{
 			name: "5.png",
-			stuccanName: "Amritanshu Jain",
-			stuccanDept: "Department Of Visual Media",
-			require: () => ("imgs/5.png")
+			stuccanName: "Chirag Parikh",
+			stuccanDept: "Department Of Art, Design And Publicity",
+			require: () => ("imgs/ChiragParikh.png")
 		},
 		{
 			name: "6.png",
-			stuccanName: "Hitesh Raghuvanshi", 
-			stuccanDept: "Department of Accomodation",
-			require: () => ("imgs/6.png")
+			stuccanName: "Punit Batra", 
+			stuccanDept: "Department of Sponsorship And Marketing",
+			require: () => ("imgs/PunitBatra.png")
+		},
+		{
+			name: "6.png",
+			stuccanName: "Satyansh Rai", 
+			stuccanDept: "President Student Union",
+			require: () => ("imgs/SatyanshRai.png")
+		},
+		{
+			name: "6.png",
+			stuccanName: "Yash Devnani", 
+			stuccanDept: "Department of Events, Competitions And Operations",
+			require: () => ("imgs/YashDevnani.png")
 		}
 	];
 	const CONTAINER = document.getElementById("image-container");
