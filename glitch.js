@@ -344,7 +344,9 @@ const flickerOut = elem => {
 
 const glitchText = elem => {
   elem.classList.remove('glitch');
-  elem.classList.add('glitch');
+  setTimeout(() => {
+    elem.classList.add('glitch');
+  }, 100)
 }
 
 const { navigate, noOfImages } = init();
