@@ -17,13 +17,14 @@
     --nd-font-size1: 76px;
     --nd-font-size2: 38px;
 }
-#text-container {
+/*#text-container {
     position: absolute;
     top: 35vh;
+    display: fl
     left: 5vw;
     text-align: center;
     width: 45vw;
-}
+}*/
 
 #text-container * {
     color: white;
@@ -32,7 +33,12 @@
 }
 
 .stuccan-container{
-    width: 100%;
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .name {
     font-size: var(--nd-font-size1);

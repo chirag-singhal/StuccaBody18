@@ -21,39 +21,39 @@ function init() {
 			require: () => ("imgs/AditiPandey.png")
 		},
 		{
-			name: "3.png",
+			name: "3",
 			stuccanName: "Rahul Unnithan",
-			stuccanDept: "Department Of Reception And Accomodation",
+			stuccanDept: "Department Of Reception And Accommodation",
 			require: () => ("imgs/RahulUnnithan.png")
 		},
 		{
-			name: "4.png",
+			name: "4",
 			stuccanName: "Aakash Singh", 
 			stuccanDept: "General Secretary Student Union",
 			require: () => ("imgs/AakashSingh.png")
 		},
 		{
-			name: "5.png",
+			name: "5",
 			stuccanName: "Chirag Parikh",
 			stuccanDept: "Department Of Art, Design And Publicity",
 			require: () => ("imgs/ChiragParikh.png")
 		},
 		{
-			name: "6.png",
+			name: "6",
 			stuccanName: "Punit Batra", 
 			stuccanDept: "Department of Sponsorship And Marketing",
 			require: () => ("imgs/PunitBatra.png")
 		},
 		{
-			name: "6.png",
+			name: "7",
 			stuccanName: "Satyansh Rai", 
 			stuccanDept: "President Student Union",
 			require: () => ("imgs/SatyanshRai.png")
 		},
 		{
-			name: "6.png",
+			name: "8",
 			stuccanName: "Yash Devnani", 
-			stuccanDept: "Department of Events, Competitions And Operations",
+			stuccanDept: "Department of Controls",
 			require: () => ("imgs/YashDevnani.png")
 		}
 	];
