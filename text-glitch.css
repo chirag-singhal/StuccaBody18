@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
 }
 
-@keyframes noise-anim {
+@keyframes noise-anim-2 {
   0% {
     clip: rect(90px, 9999px, 8px, 0);
   }
@@ -86,10 +86,10 @@ body {
   /* background: black; */
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 1s linear;
+  animation: noise-anim-2 1s linear;
 }
 
-@keyframes noise-anim-2 {
+@keyframes noise-anim-3 {
   0% {
     clip: rect(7px, 9999px, 38px, 0);
   }
@@ -164,5 +164,5 @@ body {
   /* background: black; */
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 1.5s linear;
+  animation: noise-anim-3 1.5s linear;
 }
