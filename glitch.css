@@ -147,6 +147,45 @@ html, body{
     clip: rect(475px, 9999px, 118px, 0);
   }
 }
+/* @keyframes noise-anim {
+  0% {
+    clip-path: polygon(0 90%, 100% 90%, 100% 93%, 0 93%);
+  }
+  10% {
+    clip-path: polygon(0 66%, 100% 66%, 100% 41%, 0 41%);
+  }
+  20% {
+    clip-path: polygon(0 14%, 100% 14%, 100% 97%, 0 97%);
+  }
+  30% {
+    clip-path: polygon(0 33%, 100% 33%, 100% 64%, 0 64%);
+  }
+  40% {
+    clip-path: polygon(0 28%, 100% 28%, 100% 79%, 0 79%);
+  }
+  50% {
+    clip-path: polygon(0 88%, 100% 88%, 100% 15%, 0 15%);
+  }
+  60% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+  }
+  70% {
+    clip-path: polygon(0 9%, 100% 9%, 100% 88%, 0 88%);
+  }
+  80% {
+    clip-path: polygon(0 62%, 100% 62%, 100% 18%, 0 18%);
+  }
+  90% {
+    clip-path: polygon(0 44%, 100% 44%, 100% 54%, 0 54%);
+  }
+  100% {
+    clip-path: polygon(0 76%, 100% 76%, 100% 37%, 0 37%);
+  }
+} */
+
+
+
+
 @keyframes flicker-in {
   0% {
     opacity: 0.965;
