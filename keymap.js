@@ -64,7 +64,7 @@ function key(e) {
 				window.addEventListener("keyup",key);
 			},3000);
 		}
-		else if( Number(x) >= 1 && Number(x) <= noOfImages)
+	else if( Number(x) >= 0 && Number(x) < noOfImages)
 		{
 			window.removeEventListener("keyup",key);
 			keyMap(Number(x));

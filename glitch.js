@@ -9,6 +9,13 @@ function init() {
 
 	const IMAGES = [
 		{
+			name: "0",
+			stuccanName: "",
+			stuccanDept: "",
+			require: () => ("")
+		
+		},
+		{
 			name: "1",
 			stuccanName: "Amritanshu Jain",
 			stuccanDept: "Department Of Visual Media",
@@ -68,7 +75,7 @@ function init() {
 
 		let img = document.createElement("img");
 		img.setAttribute("src", obj.require());
-		img.setAttribute("alt", obj.title);
+		//img.setAttribute("alt", obj.title);
 		img.id = "image" + index;
 		div.appendChild(img);
 
@@ -173,7 +180,7 @@ function init() {
 	  this.goToImage(index)
     },
     keyMap(key){
-      const index = key - 1;
+      const index = key;
 	  this.goToImage(index)
     }
   }
