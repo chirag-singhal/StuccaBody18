@@ -79,6 +79,7 @@
     left: 0;
     margin: 10vh 7vw;
     overflow: hidden;
+    box-shadow: 0px 0px 40px black;
 }
 .container_background{
     position: absolute;
