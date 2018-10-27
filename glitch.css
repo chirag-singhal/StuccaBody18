@@ -43,6 +43,11 @@ html, body{
   /* max-width: 100vw; */
   margin: 0 auto;
 }
+
+#image0, #image::before, #image::after{
+  opacity: 0 !important;
+  display: none;
+}
 .image::after {
   position: absolute;
   left: 8px;

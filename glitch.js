@@ -12,8 +12,7 @@ function init() {
 			name: "0",
 			stuccanName: "",
 			stuccanDept: "",
-			require: () => ("")
-		
+			require: () => ("imgs/AmritanshuJain.png")
 		},
 		{
 			name: "1",
